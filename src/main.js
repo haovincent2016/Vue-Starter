@@ -11,7 +11,12 @@ import VueLazyload from 'vue-lazyload'
 import 'mint-ui/lib/style.css'
 
 Vue.use(Vuelidate)
-Vue.use(VueLazyload)
+Vue.use(VueLazyload, {
+  preload: 1.3,
+  error: '/static/error.png',
+  loading: '/static/loading.gif',
+  attempt: 2
+})
 Vue.use(MintUI)
 
 Vue.prototype.$http = axios
