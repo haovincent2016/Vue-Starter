@@ -11,13 +11,16 @@ function resolve (dir) {
 
 
 module.exports = {
+  //../build
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
   },
   output: {
+    //../dist
     path: config.build.assetsRoot,
     filename: '[name].js',
+    //path is /
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -25,6 +28,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      //($ exact match) import Vue from 'vue/dist/vue.esm.js' = import Vue from 'vue'
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
