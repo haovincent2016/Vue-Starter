@@ -1,0 +1,35 @@
+//colors
+$blue: #26a2ff;
+$grey: #999999;
+$lightgrey: #d1d1d1;
+$orange: #f75b38;
+$yellow: #FFD161;
+$whitegrey: #f9f9f9;
+$green: #4cd96f;
+
+//width and height
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//font size, color
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+//center
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//full screen
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
